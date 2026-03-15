@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+
+@theme {
+  --font-anton: "Anton", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-signature: "Cormorant Garamond", serif;
+  
+  --color-brand-orange: #FF5500;
+  --color-brand-dark: #050505;
+  --color-brand-gray: #1F1F1F;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-orange text-white font-sans antialiased overflow-hidden h-screen;
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+    color: transparent;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(255, 85, 0, 0.5);
+  }
+  
+  .shadow-inner-lg {
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
